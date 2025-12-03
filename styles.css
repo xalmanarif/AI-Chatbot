@@ -1,0 +1,28 @@
+body {
+    font-family: Bahnschrift, sans-serif;
+    margin: 20px;
+    color : white;
+    padding : 10px;
+    background-color: #1e1e1e;
+    line-height: 1.6;
+    font-size: 18px;;
+}
+
+h1 {
+    color: #5dbc95;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+    color : white;
+}
+footer{
+    margin-top: 330px;
+}
