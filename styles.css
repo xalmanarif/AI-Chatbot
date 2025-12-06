@@ -247,23 +247,3 @@ textarea {
 main, .fade-in-section {
     padding-top: 80px;
 }
-
-.hero-section {
-    display: flex;
-    align-items: center;      
-    justify-content: center;  
-    gap: 50px;                
-    padding: 50px 20px;       
-}
-
-.hero-text {
-    text-align: center;       
-}
-
-.hero-image {
-    max-width: 300px;         
-    height: auto;
-}
-
-
-
