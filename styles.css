@@ -1,6 +1,7 @@
 body {
     font-family: Bahnschrift, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
     color: white;
     padding: 10px;
     background-color: #1e1e1e;
@@ -215,6 +216,11 @@ textarea {
     padding: 15px 25px;
     border-bottom: 2px solid rgb(56, 52, 52);
     font-family: Bahnschrift, sans-serif;
+    position: fixed;
+    top: 0;          
+    left: 0;         
+    width: 100%;      
+    z-index: 999; 
 }
 
 .navbar ul {
