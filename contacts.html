@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis - Contact Team</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px;
+            margin-top: 50px;
+            padding-bottom: 40px;
+            justify-content: center;
+        }
+
+        .team-card {
+            margin: 0 !important; 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            height: 100%; 
+            position: relative; 
+            text-align: center; 
+            padding: 40px 20px !important;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.7); 
+            border-color: #5dbc95; 
+            z-index: 10; 
+            background-color: #2a2929; 
+        }
+
+        .team-card h3 {
+            color: #5dbc95;
+            font-size: 26px;
+            margin-bottom: 5px;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #5dbc95;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .role {
+            color: #ccc;
+            font-size: 16px;
+            margin-bottom: 25px;
+            font-style: italic;
+            margin-top: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .social-btn:hover {
+            background: #5dbc95;
+            color: #1e1e1e;
+            transform: translateY(-5px);
+            border-color: #5dbc95;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fade-in-section">
+        <h1>Meet The Team</h1>
+        
+        <div class="our-goal-text" style="text-align: center; max-width: 800px; margin: 0 auto;">
+            <p style="font-weight: bold; font-size: 20px;">"The Minds Behind Artemis"</p>
+            <p style="font-size: 16px; margin-top: 10px;">
+                Connect with us for collaborations, queries, or technical support.
+            </p>
+        </div>
+
+        <div class="team-grid">
+            
+            <div class="about-text team-card">
+                <div style="font-size: 40px; color: #5dbc95; margin-bottom: 15px;">
+                    <i class="fas fa-user-astronaut"></i>
+                </div>
+                
+                <h3>Salman Arif</h3>
+                <p class="role">Developer & Team Leader</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/xalmanarif" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://pk.linkedin.com/in/muhammad-salman-arif-46b7b2382" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=imxalmanarif1@gmail.com" target="_blank" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="about-text team-card">
+                <div style="font-size: 40px; color: #5dbc95; margin-bottom: 15px;">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+
+                <h3>Amaan Bhatti</h3>
+                <p class="role">Developer & Team Member</p>
+
+                <div class="social-links">
+                    <a href="https://github.com/mominaabbasi234" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="http://www.linkedin.com/in/yeahimamaan" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=m.amaanbhatti@gmail.com" target="_blank" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="about-text team-card">
+                <div style="font-size: 40px; color: #5dbc95; margin-bottom: 15px;">
+                    <i class="fas fa-user-ninja"></i>
+                </div>
+
+                <h3>Taha Ziafat</h3>
+                <p class="role">Developer & Team Member</p>
+
+                <div class="social-links">
+                    <a href="https://github.com/tahaziafat" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-taha-ziafat-314a86361/" target="_blank" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tahaziafat@gmail.com" target="_blank" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center; font-size: 16px; color: #777;">&copy; 2025 Artemis Project</p>
+    </footer>
+
+</body>
+</html>
