@@ -136,8 +136,7 @@
         var emailBtn = document.querySelector(".email");
         var credentialBox = document.getElementById("credential-box");
         var credentialInput = document.getElementById("credential-input");
-        var continueBtn = document.getElementById("continue-credential-btn");
-        var backBtn = document.getElementById("back-btn");
+        var continueBtn = document.getElementById("continue-credential-btn");        
 
         googleBtn.onclick = function() {
          credentialBox.style.display = "block";
@@ -166,14 +165,6 @@
         continueBtn.onclick = function() {
          loginOptions.style.display = "none";
         } 
-
-        backBtn.onclick = function() {
-         credentialBox.style.display = "none";
-         credentialInput.value = "";
-         googleBtn.style.display = "block";
-         phoneBtn.style.display = "block";
-         emailBtn.style.display = "block";
-       }
 
     </script>
     <a href="Artemis.html" id="chat-btn" title="Chat with Artemis">💬</a>
