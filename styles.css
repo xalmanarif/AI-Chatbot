@@ -248,12 +248,4 @@ main, .fade-in-section {
     padding-top: 80px;
 }
 
-.right-image {
-    position: absolute;  
-    top: 50px;           
-    right: 50px;         
-    max-width: 300px;    
-    height: auto;
-    z-index: 1;          
-}
 
