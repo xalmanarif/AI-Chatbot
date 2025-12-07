@@ -61,6 +61,7 @@
     </div>
     <div id="auth-modal" class="modal">
         <div class="modal-content">
+         <button class="close-btn" id="auth-close">×</button>
          <h2>Thanks for trying Artemis</h2>
          <p>Log in or sign up to get smarter responses</p>
 
@@ -76,6 +77,7 @@
 
     <div id="login-options" class="modal">
         <div class="modal-content login-options-box">
+         <button class="close-btn" id="login-close">×</button>
          <h2>Log in or sign up</h2>
 
          <button class="login-method google">Continue with Google</button>
@@ -164,8 +166,16 @@
 
         continueBtn.onclick = function() {
          loginOptions.style.display = "none";
-        } 
+        }
 
+        document.getElementById("auth-close").onclick = function() {
+         document.getElementById("auth-modal").style.display = "none";
+        }
+
+        document.getElementById("login-close").onclick = function() {
+         document.getElementById("login-options").style.display = "none";
+        }
+ 
     </script>
     <a href="Artemis.html" id="chat-btn" title="Chat with Artemis">💬</a>
 </body>
