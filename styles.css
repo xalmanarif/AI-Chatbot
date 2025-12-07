@@ -602,3 +602,21 @@ h1 {
 #continue-credential-btn:hover {
   background-color: #4aa77f;
 }
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.modal-content {
+    position: relative;
+}
+
