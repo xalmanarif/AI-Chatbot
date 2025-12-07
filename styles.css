@@ -564,3 +564,41 @@ h1 {
   background-color: #d9d9d9;
 }
 
+#credential-box {
+  display: none; /* hidden by default */
+  margin-top: 20px;
+}
+
+#credential-input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+  font-family: Bahnschrift, sans-serif;
+}
+
+#credential-input:focus {
+  outline: none;
+  border-color: #5dbc95;
+  box-shadow: 0 0 8px #5dbc95;
+}
+
+#continue-credential-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #5dbc95;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#continue-credential-btn:hover {
+  background-color: #4aa77f;
+}
