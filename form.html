@@ -1,65 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artemis - User Feedback</title>
     <link rel="stylesheet" href="styles.css">
-    </head>
+</head>
+
 <body>
     <nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="table.html">About Artemis</a></li>
-        <li><a href="aboutservices.html">Services</a></li>
-        <li><a href="contacts.html">Contact</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="form.html">Feedback</a></li>
-    </ul>
-   </nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="table.html">About Artemis</a></li>
+            <li><a href="aboutservices.html">Services</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="form.html">Feedback</a></li>
+        </ul>
+    </nav>
 
     <div class="fade-in-section">
-    <h1>Help Artemis Grow</h1>
-    <p class="form-intro" >
-     Please fill out this form, and help us grow Artemis with your suggestions.
-        We value your feedback and look forward to hearing from you!
-    </p>
+        <h1>Help Artemis Grow</h1>
+        <p class="form-intro">
+            Please fill out this form, and help us grow Artemis with your suggestions.
+            We value your feedback and look forward to hearing from you!
+        </p>
 
-     <div class="form-container">
+        <div class="form-container">
 
 
-        <form>
-            
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
+            <form>
 
-            
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
 
-            
-            <label for="topic">What is your suggestion about?</label>
-            <select id="topic" required>
-                <option value="" disabled selected>Select a topic</option>
-                <option value="ui">UI Improvements</option>
-                <option value="features">New Features</option>
-                <option value="performance">Performance</option>
-                <option value="bugs">Bug Report</option>
-                <option value="other">Other</option>    
-            </select>
-             <label>Urgency Level</label>
-            <input type="radio" name="priority" value="low"> Low  
-            <input type="radio" name="priority" value="medium"> Medium  
-            <input type="radio" name="priority" value="high"> High  
 
-            <label for="message">Your Suggestion</label>
-            <textarea id="message" rows="5" placeholder="Write your suggestion..." required></textarea>
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
 
-            <button type="submit">Submit</button>
-             </form>
-      </div>
+
+                <label for="topic">What is your suggestion about?</label>
+                <select id="topic" required>
+                    <option value="" disabled selected>Select a topic</option>
+                    <option value="ui">UI Improvements</option>
+                    <option value="features">New Features</option>
+                    <option value="performance">Performance</option>
+                    <option value="bugs">Bug Report</option>
+                    <option value="other">Other</option>
+                </select>
+                <label>Urgency Level</label>
+                <input type="radio" name="priority" value="low"> Low
+                <input type="radio" name="priority" value="medium"> Medium
+                <input type="radio" name="priority" value="high"> High
+
+                <label for="message">Your Suggestion</label>
+                <textarea id="message" rows="5" placeholder="Write your suggestion..." required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
-   <footer>
+    <footer>
         <p style="text-align: center; font-size: 16px; color: #777;">&copy; 2025 Artemis Project</p>
     </footer>
 
