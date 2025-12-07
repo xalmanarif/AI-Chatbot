@@ -441,3 +441,57 @@ h1 {
   from { opacity: 0; transform: scale(0.95); }
   to   { opacity: 1; transform: scale(1); }
 }
+
+.login-options-box h2 {
+  color: #5dbc95;
+  margin-bottom: 20px;
+}
+
+.login-method {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s ease;
+}
+
+.google {
+  background-color: white;
+  color: black;
+}
+
+.phone {
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.email {
+  background-color: #5dbc95;
+  color: black;
+}
+
+.login-method:hover {
+  opacity: 0.8;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  margin-top: 15px;
+  cursor: pointer;
+  text-decoration: underline;
+  opacity: 0.7;
+}
+
+.back-btn:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px rgba(255,255,255,0.4);
+}
+
