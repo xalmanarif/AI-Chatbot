@@ -398,7 +398,8 @@ h1 {
   box-shadow: 0 0 8px #5dbc95;
 }
 
-#login-btn {
+#login-btn,
+#signup-btn {
   width: 100%;
   padding: 12px;
   margin-top: 10px;
@@ -412,26 +413,10 @@ h1 {
   transition: 0.3s ease;
 }
 
-#signup-btn {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border: none;
-  border-radius: 8px;
-  background-color: white;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s ease;
-
-#login-btn:hover {
-  background-color: #4aa77f;
-}
- 
+#login-btn:hover,
 #signup-btn:hover {
-  background-color: #d9d9d9; 
-}
+  background-color: #4aa77f;
+} 
 
 .continue-btn {
   background: none;
