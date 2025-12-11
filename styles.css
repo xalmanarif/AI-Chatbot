@@ -620,3 +620,15 @@ h1 {
     position: relative;
 }
 
+.team-photo-container {
+    text-align: center;
+    margin: 30px 0 40px 0;
+}
+
+.team-photo {
+    width: 65%;
+    max-width: 900px;
+    border-radius: 12px; 
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+}
+
