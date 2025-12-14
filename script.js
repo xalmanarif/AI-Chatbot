@@ -2,7 +2,7 @@ const sendBtn = document.getElementById("sendBtn");
 const input = document.getElementById("userInput");
 const chatBox = document.getElementById("chatBox");
 
-// Update this when deployed; use relative path to backend
+// Use relative path so it works on Render and locally
 const API_URL = "/api/chat";
 
 sendBtn.addEventListener("click", sendMessage);
@@ -27,11 +27,11 @@ async function sendMessage() {
     if (!res.ok) throw new Error("Network response not ok");
 
     const data = await res.json();
-    const botReply = data.choices?.[0]?.message?.content || "No response.";
-    appendMessage("Bot", botReply);
+    const botReply = data.reply || "No response.";
+    appendMessage("Artemis", botReply);
 
   } catch (err) {
-    appendMessage("Bot", "Oops! Something went wrong. Try again.");
+    appendMessage("Artemis", "Oops! Something went wrong. Try again.");
     console.error(err);
   }
 }
@@ -40,7 +40,7 @@ function appendMessage(sender, msg) {
   const p = document.createElement("p");
   p.innerHTML = `<strong>${sender}:</strong> ${escapeHTML(msg)}`;
   chatBox.appendChild(p);
-  chatBox.scrollTop = chatBox.scrollHeight; // auto scroll
+  chatBox.scrollTop = chatBox.scrollHeight;
 }
 
 // Escape HTML to prevent XSS
