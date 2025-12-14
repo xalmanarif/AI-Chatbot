@@ -15,18 +15,18 @@ app.use(express.static(path.join(process.cwd())));
 
 // Homepage route (optional, only if index.html exists)
 app.get("/", (req, res) => {
-  const homepage = path.join(process.cwd(), "index.html");
+  const homepage = path.join(process.cwd(), "Index.html");
   res.sendFile(homepage, (err) => {
     if (err) {
-      console.log("index.html not found, redirecting to chatbot page");
-      res.sendFile(path.join(process.cwd(), "artemis.html"));
+      console.log("Index.html not found, redirecting to chatbot page");
+      res.sendFile(path.join(process.cwd(), "Artemis.html"));
     }
   });
 });
 
 // Chatbot page route
 app.get("/chat", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "artemis.html"));
+  res.sendFile(path.join(process.cwd(), "Artemis.html"));
 });
 
 // API route for chatbot messages
