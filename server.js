@@ -8,14 +8,20 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from current folder
+// Serve static files from the root folder
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(process.cwd())));
 
-// Homepage route
+// Homepage route (optional, only if index.html exists)
 app.get("/", (req, res) => {
-  res.sendFile(path.join(process.cwd(), "index.html"));
+  const homepage = path.join(process.cwd(), "index.html");
+  res.sendFile(homepage, (err) => {
+    if (err) {
+      console.log("index.html not found, redirecting to chatbot page");
+      res.sendFile(path.join(process.cwd(), "artemis.html"));
+    }
+  });
 });
 
 // Chatbot page route
@@ -25,7 +31,9 @@ app.get("/chat", (req, res) => {
 
 // API route for chatbot messages
 app.post("/api/chat", async (req, res) => {
-  // your chatbot backend logic here
+  // Your chatbot backend logic goes here
+  // Example placeholder:
+  res.json({ choices: [{ message: { content: "Hello! Artemis is online." } }] });
 });
 
 app.listen(PORT, () => {
