@@ -36,9 +36,14 @@ app.get("/chat", (req, res) => {
 app.post("/api/chat", async (req, res) => {
   try {
     const userMessage = req.body.message;
+    console.log("📩 Received message:", userMessage);
+
+    const apiKey = process.env.GEMINI_API_KEY;
+    console.log("🔑 API Key exists:", !!apiKey);
+    console.log("🔑 API Key length:", apiKey?.length);
 
     const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${process.env.GEMINI_API_KEY}`,
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${apiKey}`,
       {
         method: "POST",
         headers: {
@@ -54,16 +59,27 @@ app.post("/api/chat", async (req, res) => {
       }
     );
 
+    console.log("📡 Gemini response status:", response.status);
+
     const data = await response.json();
+    console.log("📦 Full Gemini response:", JSON.stringify(data, null, 2));
+
+    // Check if there's an error in the response
+    if (data.error) {
+      console.error("❌ Gemini API error:", data.error);
+      return res.json({ reply: `Error: ${data.error.message}` });
+    }
 
     const reply =
       data.candidates?.[0]?.content?.parts?.[0]?.text ||
       "Artemis had no response 😔";
 
+    console.log("✅ Final reply:", reply);
+
     res.json({ reply });
 
   } catch (error) {
-    console.error("Gemini API error:", error);
+    console.error("💥 Server error:", error);
     res.status(500).json({ reply: "Artemis crashed mentally 💀" });
   }
 });
