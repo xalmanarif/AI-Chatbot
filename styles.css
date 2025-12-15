@@ -495,29 +495,8 @@ h1 {
   text-shadow: 0 0 8px rgba(255,255,255,0.4);
 }
 
-#chat-btn {
-  position: fixed;
-  bottom: 30px;       
-  right: 30px;        
-  width: 60px;
-  height: 60px;
-  background-color: none;  
-  color: #5dbc95;
-  font-size: 28px;
-  font-family: Bahnschrift, sans-serif;
-  text-align: center;
-  line-height: 60px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  z-index: 999;
-}
 
-#chat-btn:hover {
-  color: white;
-  text-shadow: 0 0 8px #5dbc95;
-}
+
 
 .navbar-right {
   list-style: none;
@@ -641,4 +620,28 @@ h1 {
     font-style: italic;
 }
 
+#chat-btn {
+    position: fixed;            
+    bottom: 30px;               /* distance from bottom */
+    left: 50%;                  /* center horizontally */
+    transform: translateX(-50%); /* shift back half of its width to truly center */
+    padding: 16px 28px;         
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Bahnschrift, sans-serif;
+    color: #1e1e1e;             
+    background: #5dbc95;        
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s, text-shadow 0.3s;
+    z-index: 999;
+}
 
+#chat-btn:hover {
+    background: #4aa77f;        
+    transform: translateX(-50%) scale(1.05); /* keep scaling while centered */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    color: white;
+    text-shadow: 0 0 12px #5dbc95, 0 0 20px #5dbc95; /* glowing effect */
+}

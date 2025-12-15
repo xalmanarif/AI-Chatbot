@@ -11,11 +11,11 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="Index.html">Home</a></li>
             <li><a href="table.html">About Artemis</a></li>
             <li><a href="aboutservices.html">Services</a></li>
             <li><a href="contacts.html">Contact</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="About.html">About Us</a></li>
             <li><a href="form.html">Feedback</a></li>
         </ul>
 
@@ -29,9 +29,6 @@
         <header>
             <h1>Welcome to Our AI Chatbot Project</h1>
         </header>
-
-        <img src="https://i0.wp.com/living.ai/wp-content/uploads/2020/12/product2.jpg?fit=1024%2C1024&quality=89&ssl=1"
-            alt="AI Robot" class="right-image">
 
         <main>
             <h2>Get ready for the new era of AI</h2>
@@ -51,133 +48,138 @@
             </ul>
 
             <p>This is the home page and the following buttons will navigate you to other pages.</p>
-            <link rel="stylesheet" href="styles.css">
-
         </main>
 
         <footer>
             <p style="text-align: center; font-size: 16px; color: #777;">&copy; 2025 Artemis Project</p>
         </footer>
     </div>
+
+    <!-- Authentication Modal -->
     <div id="auth-modal" class="modal">
         <div class="modal-content">
-         <button class="close-btn" id="auth-close">×</button>
-         <h2>Thanks for trying Artemis</h2>
-         <p>Log in or sign up to get smarter responses</p>
+            <button class="close-btn" id="auth-close">×</button>
+            <h2>Thanks for trying Artemis</h2>
+            <p>Log in or sign up to get smarter responses</p>
 
-         <input type="email" placeholder="Email"><br>
-         <input type="password" placeholder="Password"><br>
+            <input type="email" placeholder="Email"><br>
+            <input type="password" placeholder="Password"><br>
 
-         <button id="login-btn">Log In</button>
-         <button id="signup-btn">Sign Up</button>
+            <button id="login-btn">Log In</button>
+            <button id="signup-btn">Sign Up</button>
 
-         <button id="continue-btn" class="continue-btn">Stay logged out</button>
+            <button id="continue-btn" class="continue-btn">Stay logged out</button>
         </div>
     </div>
 
+    <!-- Login Options Modal -->
     <div id="login-options" class="modal">
         <div class="modal-content login-options-box">
-         <button class="close-btn" id="login-close">×</button>
-         <h2>Log in or sign up</h2>
+            <button class="close-btn" id="login-close">×</button>
+            <h2>Log in or sign up</h2>
 
-         <button class="login-method google">Continue with Google</button>
-         <button class="login-method phone">Continue with Phone</button>
-         <button class="login-method email">Continue with Email</button>
+            <button class="login-method google">Continue with Google</button>
+            <button class="login-method phone">Continue with Phone</button>
+            <button class="login-method email">Continue with Email</button>
 
-         <div id="credential-box" style="display:none; margin-top:20px;">
-            <input type="text" id="credential-input" placeholder="Enter your credentials" />
-            <button id="continue-credential-btn" style="margin-top:10px;">Continue</button>
-        </div>
+            <div id="credential-box" style="display:none; margin-top:20px;">
+                <input type="text" id="credential-input" placeholder="Enter your credentials" />
+                <button id="continue-credential-btn" style="margin-top:10px;">Continue</button>
+            </div>
 
-         <button id="back-btn" class="back-btn">Back</button>
+            <button id="back-btn" class="back-btn">Back</button>
         </div>
     </div>
 
+    <!-- Chat with Artemis Button -->
+    <a href="Artemis.html" id="chat-btn" title="Chat with Artemis">Chat with Artemis</a>
+
+    <!-- Scripts -->
     <script>
-        window.onload = function() {
+        // Show auth modal on load
+        window.onload = function () {
             document.getElementById("auth-modal").style.display = "flex";
         };
-        
+
         if (!localStorage.getItem("stayLoggedOut")) {
-           window.onload = function() {
-             showAuthModal();
-           };
+            window.onload = function () {
+                showAuthModal();
+            };
         }
 
-        document.getElementById("continue-btn").onclick = function() {
+        // Modal Buttons
+        document.getElementById("continue-btn").onclick = function () {
             document.getElementById("auth-modal").style.display = "none";
-        };
- 
-        document.getElementById("login-btn").onclick = function() {
-            document.getElementById("auth-modal").style.display = "none";
-        document.getElementById("login-options").style.display = "flex";
         };
 
-        document.getElementById("signup-btn").onclick = function() {
+        document.getElementById("login-btn").onclick = function () {
             document.getElementById("auth-modal").style.display = "none";
-        document.getElementById("login-options").style.display = "flex";
+            document.getElementById("login-options").style.display = "flex";
         };
 
-        document.getElementById("back-btn").onclick = function() {
-         var credentialBox = document.getElementById("credential-box");
-         if (credentialBox && credentialBox.style.display === "block") {
-          credentialBox.style.display = "none";
-          document.getElementById("credential-input").value = "";
-          document.querySelector(".google").style.display = "block";
-          document.querySelector(".phone").style.display = "block";
-          document.querySelector(".email").style.display = "block";
-         } else {
-          document.getElementById("login-options").style.display = "none";
-          document.getElementById("auth-modal").style.display = "flex";
-         }
+        document.getElementById("signup-btn").onclick = function () {
+            document.getElementById("auth-modal").style.display = "none";
+            document.getElementById("login-options").style.display = "flex";
         };
-       
+
+        document.getElementById("back-btn").onclick = function () {
+            var credentialBox = document.getElementById("credential-box");
+            if (credentialBox && credentialBox.style.display === "block") {
+                credentialBox.style.display = "none";
+                document.getElementById("credential-input").value = "";
+                document.querySelector(".google").style.display = "block";
+                document.querySelector(".phone").style.display = "block";
+                document.querySelector(".email").style.display = "block";
+            } else {
+                document.getElementById("login-options").style.display = "none";
+                document.getElementById("auth-modal").style.display = "flex";
+            }
+        };
+
         var loginOptions = document.getElementById("login-options");
         var googleBtn = document.querySelector(".google");
         var phoneBtn = document.querySelector(".phone");
         var emailBtn = document.querySelector(".email");
         var credentialBox = document.getElementById("credential-box");
         var credentialInput = document.getElementById("credential-input");
-        var continueBtn = document.getElementById("continue-credential-btn");        
+        var continueBtn = document.getElementById("continue-credential-btn");
 
-        googleBtn.onclick = function() {
-         credentialBox.style.display = "block";
-         credentialInput.placeholder = "Email or Phone";
-         googleBtn.style.display = "none";
-         phoneBtn.style.display = "none";
-         emailBtn.style.display = "none";
-        }
+        googleBtn.onclick = function () {
+            credentialBox.style.display = "block";
+            credentialInput.placeholder = "Email or Phone";
+            googleBtn.style.display = "none";
+            phoneBtn.style.display = "none";
+            emailBtn.style.display = "none";
+        };
 
-        phoneBtn.onclick = function() {
-         credentialBox.style.display = "block";
-         credentialInput.placeholder = "Phone number";
-         googleBtn.style.display = "none";
-         phoneBtn.style.display = "none";
-         emailBtn.style.display = "none";
-        }
+        phoneBtn.onclick = function () {
+            credentialBox.style.display = "block";
+            credentialInput.placeholder = "Phone number";
+            googleBtn.style.display = "none";
+            phoneBtn.style.display = "none";
+            emailBtn.style.display = "none";
+        };
 
-        emailBtn.onclick = function() {
-         credentialBox.style.display = "block";
-         credentialInput.placeholder = "Email";
-         googleBtn.style.display = "none";
-         phoneBtn.style.display = "none";
-         emailBtn.style.display = "none";
-        }
+        emailBtn.onclick = function () {
+            credentialBox.style.display = "block";
+            credentialInput.placeholder = "Email";
+            googleBtn.style.display = "none";
+            phoneBtn.style.display = "none";
+            emailBtn.style.display = "none";
+        };
 
-        continueBtn.onclick = function() {
-         loginOptions.style.display = "none";
-        }
+        continueBtn.onclick = function () {
+            loginOptions.style.display = "none";
+        };
 
-        document.getElementById("auth-close").onclick = function() {
-         document.getElementById("auth-modal").style.display = "none";
-        }
+        document.getElementById("auth-close").onclick = function () {
+            document.getElementById("auth-modal").style.display = "none";
+        };
 
-        document.getElementById("login-close").onclick = function() {
-         document.getElementById("login-options").style.display = "none";
-        }
- 
+        document.getElementById("login-close").onclick = function () {
+            document.getElementById("login-options").style.display = "none";
+        };
     </script>
-    <a href="Artemis.html" id="chat-btn" title="Chat with Artemis">💬</a>
 </body>
 
 </html>
